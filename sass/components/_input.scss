@@ -1,0 +1,96 @@
+.input {
+	background-color: $white-color;
+	display: block;
+	margin: 1em 0;
+	// max-width: 350px;
+	overflow: hidden;
+	position: relative;
+	vertical-align: top;
+	// width: calc(100% - 2em);
+	z-index: 1;
+}
+
+.input__helper {
+	position: absolute;
+	top: 0;
+}
+
+.input__field {
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	color: #6a7989;
+	display: block;
+	float: right;
+	font-weight: 400;
+	padding: 0.8em 0.8em 0.8em 2.75em;
+	position: relative;
+	width: 100%;
+	-webkit-appearance: none;
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	color: #d2d2d2;
+	display: inline-block;
+	float: right;
+	font-size: 70.25%;
+	font-weight: 800;
+	padding: 0 1em;
+	pointer-events: none;
+	position: absolute;
+	text-align: left;
+	width: 100%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	 -khtml-user-select: none;
+		 -moz-user-select: none;
+			-ms-user-select: none;
+					user-select: none;
+}
+
+.input__label-content {
+	display: inline-block;
+	padding: 1.6em 0;
+	position: relative;
+	width: auto;
+	-webkit-transform: translate3d(-1.75em, 0, 0);
+					transform: translate3d(-1.75em, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+					transition: 				transform 0.3s, opacity 0.3s;
+}
+
+.icon {
+	color: #ddd;
+	display: inline-block;
+	font-size: 150%;
+	margin-top: 0.9em;
+	-webkit-transform: translate3d(-2em, 0, 0);
+					transform: translate3d(-2em, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+					transition: 				transform 0.3s;
+}
+
+.input__field:focus + .input__label .input__label-content,
+.input--filled .input__label-content {
+	@include opacity(0);
+	-webkit-transform: translate3d(100px, 0, 0);
+					transform: translate3d(100px, 0, 0);
+}
+
+.input__label-content,
+.icon,
+.input__field:focus + .input__label .input__label-content,
+.input--filled .input__label-content {
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+					transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.input__field:focus + .input__label .icon,
+.input--filled .icon {
+	-webkit-transform: translate3d(0, 0, 0);
+					transform: translate3d(0, 0, 0);
+}

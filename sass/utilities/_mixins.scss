@@ -1,0 +1,16 @@
+// Mixin for opacity
+@mixin opacity($opacity: 0.5) {
+	$opacityMultiplied: ($opacity * 100);
+	
+	opacity: $opacity;
+	filter: alpha(opacity=$opacityMultiplied);
+}
+
+// Mixin for Media Query
+$breakpoint: 790px;
+
+@mixin large {
+  @media (min-width: #{$breakpoint}) {
+    @content;
+  }
+}

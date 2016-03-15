@@ -1,0 +1,52 @@
+.button__container {
+	text-align: center;
+}
+
+.button {
+	border: none;
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 0.875em;
+	font-weight: 600;
+	height: 50px;
+	letter-spacing: 2px;
+	margin: 0 1em;
+  max-width: 250px;
+	min-width: 150px;
+	padding: 1em 2em;
+	position: relative;
+	text-transform: uppercase;
+	top: 0;
+	-webkit-transition: background 0.3s ease-in;
+					transition: background 0.3s ease-in;
+
+	&--send,
+	&--download {
+		background-color: #27ae60;
+		color: $white-color;
+		margin-bottom: 1em;
+
+		&:hover {
+			background-color: darken(#27ae60, 10%);
+		}
+	}
+
+	&--clear {
+		background-color: #ccc;
+		color: #555;
+
+		&:hover {
+			background-color: darken(#ccc, 10%);
+		}
+	}
+
+	&:active,
+	&:focus,
+	&:hover {
+		outline: none;
+	}
+
+	&:active {
+		top: 2px;
+	}
+}

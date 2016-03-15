@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Generador de Cheques - Digital MEAT</title>
+	<link rel="stylesheet" href="stylesheets/application.css">
+</head>
+
+<body>
+	<div class="application">
+		<header class="header">
+			<a class="header__logo" href="index.html">
+				<img src="images/logo.svg" alt="Logo Cheque Generator">
+			</a>
+		</header>
+
+		<main role="main">
+			<div class="container">
+				<h1 class="title">Genera un Cheque</h1>
+				<p class="description">Ingresa los datos necesarios en nuestro sencillo formulario y genera un cheque con toda la seguridad que necesitas.</p>
+				
+				<article class="content">
+					<section class="formulario">
+						<form action="">
+							<span class="input">
+								<!-- <span class="input__helper">Ejemplo: 325.300</span> -->
+								<input class="input__field input__field--cantidad" id="cantidadCheque" type="number">
+								<label class="input__label" for="cantidadCheque">
+									<i class="fa fa-fw fa-money icon"></i>
+									<span class="input__label-content">Cantidad</span>
+								</label>
+							</span>
+
+							<span class="input">
+								<input class="input__field input__field--destinatario" id="destinatarioCheque" type="text">
+								<label class="input__label" for="destinatarioCheque">
+									<i class="fa fa-fw fa-user icon"></i>
+									<span class="input__label-content">Destinatario</span>
+								</label>
+							</span>
+
+							<span class="input">
+								<input class="input__field input__field--fecha" id="fechaCheque" type="text">
+								<label class="input__label" for="fechaCheque">
+									<i class="fa fa-fw fa-calendar-o icon"></i>
+									<span class="input__label-content">Fecha</span>
+								</label>
+							</span>
+						</form>
+
+						<div class="button__container">
+							<button class="button button--send" type="button" onclick="saveDataCheque()"><span class="fa fa-check"></span> Generar</button>
+							<button class="button button--clear" type="button"><span class="fa fa-refresh"></span> Limpiar</button>
+						</div>
+					</section>
+				</article>
+			</div>
+		</main>
+
+		<section class="cheque cheque--container">
+			<h2 class="title title--sub">Revisa tu Cheque</h2>
+
+			<canvas class="cheque__canvas" id="chequeCanvas" width="856" height="330">
+				<p>Lo sentimos, su navegador no soporta Canvas.</p>
+			</canvas>
+
+			<div class="button__container">
+				<button class="button button--download" id="downloadCheque" type="button"><span class="fa fa-download"></span> Descargar</button>
+				<button class="button button--new" type="button" onClick="window.location.reload()" ><span class="fa fa-plus"></span> Generar Nuevo</button>
+			</div>
+		</section>
+	</div>
+
+	<script src="javascripts/jquery.js"></script>
+	<script src="javascripts/datepicker.js"></script>
+	<script src="javascripts/application.js"></script>
+</body>
+</html>

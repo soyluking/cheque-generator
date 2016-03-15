@@ -1,0 +1,35 @@
+.title {
+	color: $main-color;
+	font-size: 3.125em;
+	margin: 1em 0 0.5em;
+}
+
+.description {
+	font-size: 1.125em;
+	margin: 0 auto;
+	max-width: 45em;
+	@include opacity(0.8);
+	text-align: center;
+}
+
+.content {
+	margin-bottom: 7.5em;
+	margin-top: 3em;
+}
+
+.formulario form {
+	font-size: 125%;
+}
+
+.cheque {
+	background-color: darken(#f0f0f0, 10%);
+	display: none;
+	padding-bottom: 2.5em;
+	padding-top: 2.5em;
+	text-align: center;
+}
+
+.cheque__canvas {
+	margin: 2.5em auto 5em;
+	max-width: 100%;
+}
